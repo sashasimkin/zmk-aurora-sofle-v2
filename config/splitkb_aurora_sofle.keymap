@@ -24,16 +24,21 @@
 #define FN      3
 #define ADJUST  4
 
+//&sensors {
+//    left_config {
+//        triggers-per-rotation = <72>;
+//    };
+//
+//    right_config {
+//        triggers-per-rotation = <24>;
+//    };
+//};
 
 / {
     sensors {
-        left_config {
-            triggers-per-rotation = <36>;
-        };
-
-        right_config {
-            triggers-per-rotation = <24>;
-        };
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <36>;
     };
 
     behaviors {
@@ -43,6 +48,12 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -66,6 +77,8 @@
 &kp LSHFT &kp Z         &kp X         &kp C           &kp V         &kp B      &kp C_MUTE     &kp LC(SPACE) &kp N  &kp M        &kp COMMA      &kp DOT       &kp FSLH   &kp BSLH
                         &kp LCTRL &kp LALT            &kp LGUI      &mo LOWER  &kp SPACE      &kp RET  &mo RAISE  &mo FN        &kp LS(PLUS)   &kp MINUS
             >;
+//            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+//            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
