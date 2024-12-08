@@ -29,6 +29,9 @@
     left_encoder {
         triggers-per-rotation = <72>;
     };
+    right_encoder {
+        triggers-per-rotation = <72>;
+    };
 };
 
 / {
@@ -74,9 +77,9 @@
 &kp LSHFT &kp Z         &kp X         &kp C           &kp V         &kp B      &kp C_MUTE     &kp LC(SPACE) &kp N  &kp M        &kp COMMA      &kp DOT       &kp FSLH   &kp BSLH
                         &kp LCTRL &kp LALT            &kp LGUI      &mo LOWER  &kp SPACE      &kp RET  &mo RAISE  &mo FN        &kp LS(PLUS)   &kp MINUS
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
+//            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
 //            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP>;
-//            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
