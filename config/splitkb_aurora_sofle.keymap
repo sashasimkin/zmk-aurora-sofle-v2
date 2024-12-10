@@ -66,6 +66,23 @@
         };
     };
 
+    macros {
+        ZMK_MACRO(my_input_macro,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp H &kp A &kp T &kp SPACE &kp T &kp H &kp E &kp SPACE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp M>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp A &kp C>
+                ;
+        )
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -117,10 +134,10 @@
 
         adjust_layer {
             bindings = <
-&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                &trans       &trans    &trans     &trans    &trans    &trans
-&bt BT_CLR   &trans       &trans       &trans       &trans       &trans                                &trans       &trans    &trans     &trans    &trans    &trans
-&trans       &trans       &trans       &trans       &trans       &trans                                &trans       &trans    &trans     &trans    &trans    &trans
-&trans       &trans       &trans       &trans       &trans       &trans    &trans           &trans     &trans       &trans    &trans     &trans    &trans    &trans
+&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans                                 &trans       &trans    &trans     &trans    &trans    &trans
+&bt BT_CLR   &trans       &trans       &trans       &trans       &trans                                 &trans       &trans    &trans     &trans    &trans    &trans
+&trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans    &trans     &trans    &trans    &trans
+&trans       &trans       &trans       &trans       &trans       &trans    &my_input_macro  &kp C_POWER &trans       &trans    &trans     &trans    &trans    &trans
                           &trans       &trans       &trans       &trans    &bootloader      &bootloader  &trans     &trans    &trans     &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
