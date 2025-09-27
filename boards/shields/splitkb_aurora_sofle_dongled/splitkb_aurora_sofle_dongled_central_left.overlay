@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "splitkb_aurora_sofle.dtsi"
+#include "splitkb_aurora_sofle_dongled.dtsi"
 
 / {
     chosen {
@@ -39,5 +39,3 @@
 &left_encoder {
     status = "okay";
 };
-
-

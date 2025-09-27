@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#include "splitkb_aurora_sofle.dtsi"
+#include "splitkb_aurora_sofle_dongled.dtsi"
 
 / {
     chosen {
@@ -9,6 +9,7 @@
 
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
+        wakeup-source;
         columns = <0>;
         rows = <0>;
         events = <0>;
