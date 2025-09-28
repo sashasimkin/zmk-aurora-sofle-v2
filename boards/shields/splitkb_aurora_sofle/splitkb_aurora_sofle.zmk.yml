@@ -1,5 +1,5 @@
 file_format: "1"
-id: splitkb_aurora_sofle_dongled
+id: splitkb_aurora_sofle
 name: splitkb.com Aurora Sofle Dongled
 type: shield
 url: https://splitkb.com/products/aurora-sofle-pcb-kit
@@ -12,7 +12,7 @@ features:
   - underglow
   - studio
 siblings:
-  - splitkb_aurora_sofle_dongled_dongle
-  - splitkb_aurora_sofle_dongled_central_left
-  - splitkb_aurora_sofle_dongled_left
-  - splitkb_aurora_sofle_dongled_right
+  - splitkb_aurora_sofle_dongle
+  - splitkb_aurora_sofle_peripheral_left
+  - splitkb_aurora_sofle_left
+  - splitkb_aurora_sofle_right

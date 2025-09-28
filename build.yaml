@@ -20,12 +20,12 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_dongled_dongle
+    shield: splitkb_aurora_sofle_dongle
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_dongled_central_left
+    shield: splitkb_aurora_sofle_peripheral_left
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_dongled_left
+    shield: splitkb_aurora_sofle_left
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_dongled_right
+    shield: splitkb_aurora_sofle_right
   - board: nice_nano_v2
     shield: settings_reset
