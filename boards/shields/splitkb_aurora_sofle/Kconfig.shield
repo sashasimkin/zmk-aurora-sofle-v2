@@ -1,8 +1,0 @@
-# Copyright (c) 2023 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-config SHIELD_SPLITKB_AURORA_SOFLE_DONGLE
-    def_bool $(shields_list_contains,splitkb_aurora_sofle_dongle)
-
-config SHIELD_SPLITKB_AURORA_SOFLE_PERIPHERAL_LEFT
-    def_bool $(shields_list_contains,splitkb_aurora_sofle_peripheral_left)
